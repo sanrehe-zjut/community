@@ -12,6 +12,7 @@
 ## 工具
 [Git](https://git-scm.com/download)
 [Visual Paradigm](https://www.visual-paradigm.com)
+[Flyway](https://flywaydb.org/getstarted/firststeps/maven)  
 
 ## 脚本
 ```sql
@@ -24,4 +25,8 @@ CREATE TABLE USER
     GMT_CREATE BIGINT,
     GMT_MODIFIED BIGINT
 );
+```
+```bash
+mvn flyway:migrate
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
