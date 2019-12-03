@@ -1,11 +1,7 @@
 package life.majiang.community.mapper;
 
 import life.majiang.community.model.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Service;
+import org.apache.ibatis.annotations.*;
 
 /**
  *
@@ -20,4 +16,10 @@ public interface UserMapper {
 
     @Select("SELECT * FROM `user` WHERE id = #{id}")
     User findById(@Param("id") Integer creator);
+
+    @Select("SELECT * FROM `user` WHERE account_id = #{accountId}")
+    User findByAccountId(@Param("accountId") String accountId);
+
+    @Update("UPDATE `user` SET name = #{name}, token = #{token}, gmt_modified = #{gmtModified}, avatar_url = #{avatarUrl} WHERE account_id = #{accountId}")
+    void update(User dbUser);
 }
