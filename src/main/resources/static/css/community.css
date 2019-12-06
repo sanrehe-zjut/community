@@ -28,3 +28,6 @@ body {
     font-size: 13px;
     text-decoration: none !important;
 }
+.jumbotron {
+    margin: 50px;
+}
