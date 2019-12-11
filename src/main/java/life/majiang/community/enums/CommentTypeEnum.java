@@ -4,9 +4,9 @@ package life.majiang.community.enums;
  *
  */
 public enum CommentTypeEnum {
-    QUESTION(1),
-    COMMENT(2)
-    ;
+    QUESTION(0),
+    COMMENT(1);
+
     private Integer type;
 
     public static boolean isExist(Integer type) {
