@@ -1,6 +1,5 @@
 package life.majiang.community.service;
 
-import life.majiang.community.dto.CommentCreateDTO;
 import life.majiang.community.dto.CommentDTO;
 import life.majiang.community.enums.CommentTypeEnum;
 import life.majiang.community.exception.CustomizeErrorCode;
@@ -72,9 +71,10 @@ public class CommentService {
         }
     }
 
-    public List<CommentDTO> listByquestionId(Long id) {
+    public List<CommentDTO> listByTargetId(Long id, CommentTypeEnum type) {
         CommentExample commentExample = new CommentExample();
-        commentExample.createCriteria().andParentIdEqualTo(id).andTypeEqualTo(CommentTypeEnum.QUESTION.getType());
+        //CommentTypeEnum.QUESTION.getType()
+        commentExample.createCriteria().andParentIdEqualTo(id).andTypeEqualTo(type.getType());
         // 时间顺序排列
         commentExample.setOrderByClause("gmt_create DESC");
         List<Comment> comments = commentMapper.selectByExample(commentExample);
