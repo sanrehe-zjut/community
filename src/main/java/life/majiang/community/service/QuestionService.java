@@ -155,4 +155,8 @@ public class QuestionService{
         question.setViewCount(1);
         questionExtMapper.incView(question);
     }
+
+    public List<QuestionDTO> selectRelated(QuestionDTO questionDTO) {
+        return null;
+    }
 }

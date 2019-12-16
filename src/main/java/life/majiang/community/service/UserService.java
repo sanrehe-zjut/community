@@ -40,8 +40,6 @@ public class UserService {
             userMapper.updateByExampleSelective(updateUser, example);
             // userMapper.update(dbUser);
             // 更新
-
-
         }
     }
 }
