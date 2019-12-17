@@ -33,6 +33,7 @@ public class QuestionController {
         List<CommentDTO> comments = commentService.listByTargetId(id, CommentTypeEnum.QUESTION);
         model.addAttribute("question", questionDTO);
         model.addAttribute("comments", comments);
+        model.addAttribute("relatedQuestions", relatedQuestions);
         //
 
         questionService.incView(id);
