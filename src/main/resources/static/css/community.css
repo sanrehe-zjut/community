@@ -45,8 +45,14 @@ body {
     margin-top: 10px;
 }
 
+.publish-tag-tab .label-info {
+    white-space: normal;
+    margin: 5px 5px;
+    display: inline-block;
+}
+
 .community-menu {
-    display: block;
+    /* display: block; */
     color: #999;
     font-size: 13px;
     margin-bottom: 15px;
