@@ -53,6 +53,7 @@ public class NotificationService {
         Integer offset = size * (page - 1);
         NotificationExample example = new NotificationExample();
         example.createCriteria().andReceiverEqualTo(userId);
+        example.setOrderByClause("gmt_create DESC");
         List<Notification> notifications = notificationMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
         // List<Question> questions = questionMapper.listByUserId(userId, offset, size);
         List<NotificationDTO> notificationDTOS = new ArrayList<>();

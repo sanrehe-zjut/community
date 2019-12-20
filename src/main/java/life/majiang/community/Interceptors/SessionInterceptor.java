@@ -38,8 +38,8 @@ public class SessionInterceptor implements HandlerInterceptor {
                         // HttpSession session = request.getSession();
                         // session.setAttribute("user", users.get(0));
                         // 自己写
-                        Long unread = notificationService.unreadCount(users.get(0).getId());
-                        request.getSession().setAttribute("unread", unread);
+                        Long unreadCount = notificationService.unreadCount(users.get(0).getId());
+                        request.getSession().setAttribute("unreadMessage", unreadCount);
                         //
                         request.getSession().setAttribute("user", users.get(0));
                     }
