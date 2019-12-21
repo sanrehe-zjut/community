@@ -75,5 +75,6 @@ public class AuthorizeController {
         cookie.setMaxAge(0);
         response.addCookie(cookie);
         return "redirect:/";
+
     }
 }
