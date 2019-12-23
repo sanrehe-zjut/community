@@ -92,6 +92,7 @@ public class PublishController {
         question.setCreator(user.getId());
         question.setId(id);
 
+
         questionService.createOrUpdate(question);
 
         // 返回至首页
