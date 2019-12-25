@@ -44,6 +44,7 @@ public class NotificationService {
         if (page < 1) {
             page = 1;
         }
+
         if (page > totalPage) {
             page = totalPage;
         }
@@ -61,6 +62,7 @@ public class NotificationService {
         if (notifications.size() == 0) {
             return paginationDTO;
         }
+
         /*
         Set<Long> disUserIds = notifications.stream().map(notify -> notify.getNotifier()).collect(Collectors.toSet());
         ArrayList<Long> userIds = new ArrayList<>(disUserIds);
